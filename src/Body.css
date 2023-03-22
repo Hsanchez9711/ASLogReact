@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&family=Voces&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Rajdhani&display=swap");
+
+.App {
+  position: absolute;
+  text-align: center;
+  background-color: #e7f1fc;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.body {
+  width: 100%;
+  background-color: #e7f1fc;
+}
+
+.Above-logo {
+  width: 24%;
+  height: 24%;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-top: -14%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.AS-logo {
+  width: 10%;
+  margin-top: 1%;
+  pointer-events: none;
+  right: 15%;
+  /* -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out; */
+  position: relative;
+  /* animation: Move-img-right 3s; */
+  animation: fadeIn 5s;
+}
+
+.Header {
+  background-color: #2f5199;
+
+  width: 100%;
+  height: 65px;
+}
+.slideshow {
+  position: absolute;
+  height: 450px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+  border-radius: 50%;
+}
+
+.our-motto {
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.greetingBox {
+  border-radius: 1rem;
+  position: absolute;
+  top: 5%;
+  left: 35%;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  color: white;
+  width: 40%;
+  height: 60%;
+  position: absolute;
+  text-align: center;
+  margin-left: 20%;
+  margin-top: 2%;
+  font-size: 38px;
+  animation: fadeIn 5s;
+}
+
+@supports (backdrop-filter: blur(1px)) {
+  .greetingBox {
+    /* backdrop-filter: blur(1px); */
+  }
+}
+
+.firstPage {
+  width: 100%;
+}
+
+h6 {
+  margin-top: -5%;
+}
+
+.homeBtn,
+.aboutBtn,
+.servicesBtn,
+.contactBtn {
+  border: 2px solid #2f5199;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  /* border-width: medium; */
+  color: #fff;
+  background-color: #2f5199;
+  margin-top: 1.25%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  float: left;
+  left: 2%;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #b0cdff;
+  -webkit-transition: ease-out 0.2s;
+  -moz-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
+button:hover {
+  background-color: #78c4ff;
+}
+
+.infoCard {
+  width: 300px;
+  height: 225px;
+  background: rgb(0, 87, 128);
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.123); */
+}
+
+.icon {
+  width: 8%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+.servicesIcons {
+  display: inline-block;
+}
+
+.icons-and-services {
+  margin-top: 8%;
+}
+
+h5 {
+  padding-left: 20px;
+}
+
+.context {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  padding: 0.4em 1.5em;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  transform: scale(0.9);
+  /* color: #ffffff; */
+  border: 1px solid rgba(255, 255, 255, 0.164);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.infoCard:hover .context {
+  height: 150px;
+}
+
+.our-services {
+  margin-top: 10%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.testing {
+  position: relative;
+  display: inline-block;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testing:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 99%;
+  display: inline-block;
+  background: -moz-linear-gradient(
+    left,
+    rgb(5, 86, 236) 0%,
+    rgba(253, 252, 251, 0) 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left,
+    right,
+    color-stop(0%, rgba(253, 252, 251, 0)),
+    color-stop(100%, rgb(5, 86, 236))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(253, 252, 251, 0) 0%,
+    #2f5199 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    rgba(253, 252, 251, 0) 0%,
+    #2f5199 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    rgba(253, 252, 251, 0) 0%,
+    #2f5199 100%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to right,
+    rgba(253, 252, 251, 0) 0%,
+    #2f5199 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 );
+}
+
+.servicesInfo {
+  margin-left: 5%;
+  position: relative;
+  margin-top: 0%;
+}
+
+. @media (prefers-reduced-motion: no-preference) {
+  /* .App-logo,
+  .Above-logo {
+    animation: Transition-images-in 1s;
+  } */
+
+  /* .AS-logo {
+    animation: Move-Image-Right 5s;
+  } */
+}
+
+.mainBanner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.servicesMural {
+  display: grid;
+}
+
+.servicesBanner {
+  width: 100%;
+  float: right;
+  margin-top: 15%;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes Main-logo-animation {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  25.01% {
+    opacity: 0;
+  }
+}
+
+@keyframes Transition-images-in {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes Move-img-right {
+  from {
+    right: 40%;
+  }
+  to {
+    right: 20%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
