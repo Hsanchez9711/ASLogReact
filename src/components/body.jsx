@@ -1,6 +1,6 @@
 import React from "react";
 // import infoTab from "./InfoTab";
-import logo from "../images/ASLLOGO.PNG";
+import logo from "../images/LogoNoBGWhite.png";
 import aboveLogo from "../images/frontcenter.png";
 import slideshowImage1 from "../images/slideshow/adobe.jpeg";
 import slideshowImage2 from "../images/slideshow/elPasoSkyline.jpg";
@@ -16,6 +16,8 @@ import otrIcon from "../images/cargo-truck.png";
 import documentsIcon from "../images/clipboard.png";
 import "../../src/Body.css";
 import Collapsible from "react-collapsible";
+import { Player } from "video-react";
+import Movie from "../images/istockphoto-538845548-640_adpp_is.mp4";
 
 const Body = props => {
   return (
@@ -41,12 +43,12 @@ const Body = props => {
         />
       </div>
       <div className="body">
-        <div className="testing">
-          <img
+        <div className="testing parallax">
+          {/* <img
             className="mainBanner"
             src={stockPhoto}
             alt="Blue Semi-Truck driving east bound on highway"
-          />
+          /> */}
         </div>
         <div className="greetingBox">
           {" "}
@@ -166,6 +168,9 @@ const Body = props => {
               alt="Parked Semi-Trucks in a truck-lot"
             />
           </div>
+          <Player autoPlay={true}>
+            <source src={Movie} />
+          </Player>
         </div>
       </div>
 
