@@ -43,7 +43,11 @@
   transition: opacity 1s ease-in-out; */
   position: relative;
   /* animation: Move-img-right 3s; */
-  animation: fadeIn 5s;
+  animation: fadeIn 7s;
+}
+
+.collapsible-div {
+  margin-bottom: 2%;
 }
 
 .Header {
@@ -62,10 +66,11 @@
 }
 
 .our-motto {
+  color: #2f5199;
   width: 80%;
   text-align: center;
   margin-left: 10%;
-  margin-top: 5%;
+  margin-top: 12%;
 }
 
 .greetingBox {
@@ -83,7 +88,7 @@
   margin-left: 20%;
   margin-top: 2%;
   font-size: 38px;
-  animation: fadeIn 5s;
+  animation: fadeIn 7s;
 }
 
 @supports (backdrop-filter: blur(1px)) {
@@ -140,7 +145,7 @@ button:hover {
 }
 
 .icon {
-  width: 8%;
+  width: 4%;
 }
 
 .info {
@@ -150,16 +155,36 @@ button:hover {
   margin-left: 10%;
   margin-bottom: 5%;
 }
-.servicesIcons {
+/* .servicesIcons {
   display: inline-block;
-}
+} */
 
 .icons-and-services {
-  margin-top: 8%;
+  margin-top: 20%;
+  position: absolute;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
 }
 
 h5 {
   padding-left: 20px;
+  color: white;
+}
+
+.Collapsible {
+  color: white;
+  font-weight: bold;
+}
+
+.Collapsible:hover {
+  color: #78c4ff;
+}
+
+.Collapsible_trigger {
+  font-weight: bold;
 }
 
 .context {
@@ -184,14 +209,18 @@ h5 {
   height: 150px;
 }
 
-.our-services {
-  margin-top: 10%;
+/* .foo {
+  position: absolute;
+} */
 
-  display: grid;
+.our-services {
+  color: white;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
-.testing {
+
+.our-services-title {
+  margin-top: 0%;
 }
 
 .testing:after {
@@ -199,7 +228,7 @@ h5 {
   left: 0;
   top: 0;
   width: 100%;
-  height: 99%;
+  height: 100%;
   display: inline-block;
   background: -moz-linear-gradient(
     left,
@@ -214,22 +243,22 @@ h5 {
     color-stop(100%, rgb(5, 86, 236))
   ); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(
-    left,
+    right,
     rgba(253, 252, 251, 0) 0%,
     #2f5199 100%
   ); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(
-    left,
+    right,
     rgba(253, 252, 251, 0) 0%,
     #2f5199 100%
   ); /* Opera 11.10+ */
   background: -ms-linear-gradient(
-    left,
+    right,
     rgba(253, 252, 251, 0) 0%,
     #2f5199 100%
   ); /* IE10+ */
   background: linear-gradient(
-    to right,
+    to left,
     rgba(253, 252, 251, 0) 0%,
     #2f5199 100%
   ); /* W3C */
@@ -262,14 +291,26 @@ h5 {
 .parallax {
   /* The image used */
   background-image: url("../src/images/semi-stock-banner-2.jpg");
-
   /* Set a specific height */
   min-height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-two {
+  /* The image used */
+  background-image: url("../src/images/parked-semis.jpg");
+
+  /* Set a specific height */
+  min-height: 900px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .servicesMural {
@@ -278,25 +319,11 @@ h5 {
 
 .servicesBanner {
   width: 100%;
+  height: 500px;
   float: right;
   margin-top: 15%;
 }
 
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-.active,
-.collapsible:hover {
-  background-color: #555;
-}
 .content {
   padding: 0 18px;
   display: none;
