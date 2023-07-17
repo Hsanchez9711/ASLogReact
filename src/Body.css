@@ -144,7 +144,7 @@ button:hover {
 }
 
 .icon {
-  width: 4%;
+  width: 50px;
 }
 
 .info {
@@ -178,7 +178,7 @@ h5 {
   font-weight: bold;
 }
 
-.Collapsible:hover {
+.tab:hover {
   color: #78c4ff;
 }
 
@@ -191,8 +191,9 @@ h5 {
 }
 
 .tab {
-  margin-right: 10px;
-  width: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .tab-header {
@@ -226,6 +227,13 @@ h5 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
   overflow: hidden;
   transition: all 0.4s;
+}
+
+.as-logo-shield {
+  position: absolute;
+  top: 53%;
+  width: 200px;
+  transform: translate(-50%, -50%);
 }
 
 .infoCard:hover .context {
@@ -326,7 +334,7 @@ h5 {
   background-image: url("../src/images/parked-semis.jpg");
 
   /* Set a specific height */
-  height: 70vh;
+  height: 90vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

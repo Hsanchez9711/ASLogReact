@@ -8,6 +8,7 @@ import locationIcon from "../images/location.png";
 import ltlIcon from "../images/distribution-center-2.png";
 import otrIcon from "../images/cargo-truck.png";
 import documentsIcon from "../images/clipboard.png";
+import asLogoShield from "../images/revisedlogo.png";
 import "../../src/Body.css";
 import Collapsible from "react-collapsible";
 import Tabs from "./Tabs.jsx";
@@ -67,6 +68,11 @@ const Body = props => {
           </h6>
         </div>
         <div className="our-motto">
+          <img
+            className="as-logo-shield"
+            src={asLogoShield}
+            alt="A.S. Logistics logo with shield background"
+          />
           <h1>
             <b>Our Promise To Our Customers</b>
           </h1>
