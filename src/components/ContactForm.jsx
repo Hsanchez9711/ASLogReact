@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import PhoneInput from "react-phone-number-input";
 
 const ContactForm = () => {
   // State to manage form data
   const [formData, setFormData] = useState({
-    name: "",
+    prefix: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    message: ""
+    message: "",
+    number: ""
   });
-
+  const [phoneNumber, setPhoneNumber] = useState("");
   // Event handler for form submission
   const handleSubmit = event => {
     event.preventDefault();
@@ -15,15 +19,22 @@ const ContactForm = () => {
     console.log("Form submitted:", formData);
     // Reset the form fields after submission
     setFormData({
-      name: "",
+      prefix: "",
+      firstName: "",
+      lastName: "",
       email: "",
-      message: ""
+      message: "",
+      number: ""
     });
   };
 
+  const handlePhoneChange = value => {
+    setPhoneNumber(value);
+  };
   // Event handler for input changes
   const handleChange = event => {
     const { name, value } = event.target;
+    console.log(name, value);
     setFormData(prevFormData => ({
       ...prevFormData,
       [name]: value
@@ -31,41 +42,91 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div className="centered-form">
+      <form className="form-parent" onSubmit={handleSubmit}>
+        <h1 className="contact-us">
+          {" "}
+          <b>Contact Us</b>
+        </h1>
+        <div className="form-input prefix-input">
+          <label htmlFor="prefix" />
+          <select
+            className="title-select"
+            name="prefix"
+            id="prefix"
+            onChange={handleChange}
+          >
+            <option value=""> Title </option>
+            <option value="Dr."> Dr. </option>
+            <option value="Mr."> Mr. </option>
+            <option value="Mrs."> Mrs. </option>
+            <option value="Ms."> Ms. </option>
+          </select>
+        </div>
+        <div className="form-input">
+          <label htmlFor="first-name" />
+          <input
+            type="text"
+            id="name"
+            name="firstName"
+            placeholder="First Name"
+            value={formData.firstName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-input">
+          <label htmlFor="last-name" />
+          <input
+            type="text"
+            id="name"
+            name="lastName"
+            placeholder="Last Name"
+            value={formData.lastName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="form-input">
+          <label htmlFor="email" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="form-input">
+          <PhoneInput
+            id="phone"
+            name="phone"
+            defaultCountry="US"
+            maxLength="14"
+            value={formData.number}
+            onChange={handlePhoneChange}
+            placeholder="Phone Number (e.g., xxx-xxx-xxxx)"
+          />
+        </div>
+
+        <div className="form-input">
+          <label htmlFor="message" />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Please tell us more about your inquiry"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 };
 
