@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import PhoneInput from "react-phone-number-input";
+import fbLogo from "../images/1298738_facebook_brand_fb_logo_social media_icon.png";
+import igLogo from "../images/instagram-icon.png";
 
 const ContactForm = () => {
   // State to manage form data
@@ -42,90 +44,146 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="centered-form">
-      <form className="form-parent" onSubmit={handleSubmit}>
-        <h1 className="contact-us">
-          {" "}
-          <b>Contact Us</b>
-        </h1>
-        <div className="form-input prefix-input">
-          <label htmlFor="prefix" />
-          <select
-            className="title-select"
-            name="prefix"
-            id="prefix"
-            onChange={handleChange}
-          >
-            <option value=""> Title </option>
-            <option value="Dr."> Dr. </option>
-            <option value="Mr."> Mr. </option>
-            <option value="Mrs."> Mrs. </option>
-            <option value="Ms."> Ms. </option>
-          </select>
+    <div className="row">
+      <div className="column">
+        <div className="phone-numbers">
+          <h1> Contact Us </h1>
+          <h3>
+            {" "}
+            <u>Main Office:</u> (915) 590 - 2777{" "}
+          </h3>
+          <h3>
+            {" "}
+            Ada Sanchez - President
+            <br /> Mobile: (915) 726 - 4491 <br />
+            Fax:(915) 852 - 0106 <br /> Email: ada@aslogisticsep.com <br />{" "}
+          </h3>
+          <h3>
+            Hector Sanchez - Operations Manager <br /> Mobile: (915) 471 - 5013{" "}
+            <br />
+            Fax:915) 852- 0106
+            <br /> Email: hsanchez@aslogisticsep.com
+            <br />
+          </h3>
+          <h3>
+            <u>Mailing Address:</u>
+            <br /> 8900 Viscount Blvd. Suite # AN724
+            <br /> El Paso, TX 79925
+            <br />
+          </h3>
+          <h3>
+            <u>
+              Physical Address:
+              <br />
+            </u>{" "}
+            13979 Windermere Ave, El Paso, TX 79928
+            <br />{" "}
+          </h3>
+          <a href="https://www.instagram.com/a.s.logisticscorp/?igshid=MzRlODBiNWFlZA%3D%3D">
+            <img src={igLogo} className="insta-logo"></img>
+          </a>
+          <a href="https://www.facebook.com/AS.LOGISTIC.CORPORATION">
+            <img src={fbLogo} className="facebook-logo"></img>
+          </a>
         </div>
-        <div className="form-input">
-          <label htmlFor="first-name" />
-          <input
-            type="text"
-            id="name"
-            name="firstName"
-            placeholder="First Name"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-input">
-          <label htmlFor="last-name" />
-          <input
-            type="text"
-            id="name"
-            name="lastName"
-            placeholder="Last Name"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
-        </div>
+      </div>
+      <div className="column">
+        <form className="form-parent" onSubmit={handleSubmit}>
+          <h1 className="contact-us">
+            <b>Request Info</b>
+          </h1>
+          <div className="form-input prefix-input">
+            <label htmlFor="prefix" />
+            <select
+              className="title-select"
+              name="prefix"
+              id="prefix"
+              onChange={handleChange}
+            >
+              <option value=""> Title </option>
+              <option value="Dr."> Dr. </option>
+              <option value="Mr."> Mr. </option>
+              <option value="Mrs."> Mrs. </option>
+              <option value="Ms."> Ms. </option>
+            </select>
+          </div>
+          <div className="form-input">
+            <label htmlFor="first-name" />
+            <input
+              type="text"
+              id="name"
+              name="firstName"
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-input">
+            <label htmlFor="last-name" />
+            <input
+              type="text"
+              id="name"
+              name="lastName"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="form-input">
-          <label htmlFor="email" />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="E-mail"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-input">
+            <label htmlFor="email" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-mail"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="form-input">
-          <PhoneInput
-            id="phone"
-            name="phone"
-            defaultCountry="US"
-            maxLength="14"
-            value={formData.number}
-            onChange={handlePhoneChange}
-            placeholder="Phone Number (e.g., xxx-xxx-xxxx)"
-          />
-        </div>
+          <div className="form-input">
+            <PhoneInput
+              id="phone"
+              name="phone"
+              defaultCountry="US"
+              maxLength="14"
+              value={formData.number}
+              onChange={handlePhoneChange}
+              placeholder="Phone Number (e.g., xxx-xxx-xxxx)"
+            />
+          </div>
 
-        <div className="form-input">
-          <label htmlFor="message" />
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Please tell us more about your inquiry"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+          <div className="form-input">
+            <label htmlFor="message" />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Please tell us more about your inquiry"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button className="submit-button" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div className="column">
+        <iframe
+          className="google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.564434661254!2d-106.23885022487111!3d31.755087935509046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e74110765a18b3%3A0x6bf0c9bd2c922946!2sA.S.%20Logistics%20Corp!5e0!3m2!1sen!2sus!4v1691275415039!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
   );
 };

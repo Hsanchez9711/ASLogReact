@@ -1,19 +1,11 @@
 import React from "react";
-// import infoTab from "./InfoTab";
 import logo from "../images/LogoNoBGWhite.png";
 import servicesBanner from "../images/parked-semis.jpg";
-import warehouseIcon from "../images/distribution-center.png";
-import flatbedIcon from "../images/container-3.png";
-import locationIcon from "../images/location.png";
-import ltlIcon from "../images/distribution-center-2.png";
-import otrIcon from "../images/cargo-truck.png";
-import documentsIcon from "../images/clipboard.png";
 import asLogoShield from "../images/revisedlogo.png";
 import "../../src/Body.css";
-import Collapsible from "react-collapsible";
 import Tabs from "./Tabs.jsx";
-// import Movie from "../images/istockphoto-538845548-640_adpp_is.mp4";
 import ContactForm from "./ContactForm.jsx";
+import AboutUs from "./AboutUs.jsx";
 
 function toggleTab(tabNumber) {
   const content = document.getElementById(`tab-content-${tabNumber}`);
@@ -38,12 +30,24 @@ const Body = props => {
         <button className="aboutBtn" type="button">
           <b>About Us</b>
         </button>
-        <button className="servicesBtn" type="button">
-          <b>Our Services</b>
-        </button>
-        <button className="contactBtn" type="button">
-          <b>Contact Us</b>
-        </button>
+        <a href="#services-section">
+          <button
+            className="servicesBtn"
+            type="button"
+            href="#services-section"
+          >
+            <b>Our Services</b>
+          </button>
+        </a>
+        <a href="#contact-form">
+          <button
+            className="contactBtn"
+            type="button"
+            onClick="document.getElementById('contact-form').scrollIntoView();"
+          >
+            <b>Contact Us</b>
+          </button>
+        </a>
         <div className="logo-container">
           <img
             className="AS-logo"
@@ -68,11 +72,6 @@ const Body = props => {
           </h6>
         </div>
         <div className="our-motto">
-          <img
-            className="as-logo-shield"
-            src={asLogoShield}
-            alt="A.S. Logistics logo with shield background"
-          />
           <h1>
             <b>Our Promise To Our Customers</b>
           </h1>
@@ -86,13 +85,19 @@ const Body = props => {
             are considering freight delivery consider A.S Logistic Corporation
             as your first choice!
           </h3>
+          <img
+            className="as-logo-shield"
+            src={asLogoShield}
+            alt="A.S. Logistics logo with shield background"
+          />
         </div>
-
         <div className="our-services">
           <div className="servicesIcons">
             <div className="servicesMural">
-              <div className="testing parallax-two servicesBanner" />
-
+              <div
+                className="testing parallax-two servicesBanner"
+                id="services-section"
+              />
               <div className="icons-and-services">
                 <h1 className="our-services-title">
                   <b> Our Services </b>{" "}
@@ -100,22 +105,11 @@ const Body = props => {
                 <Tabs />
               </div>
             </div>
-
-            {/*  */}
           </div>
-
-          {/* <Player autoPlay={true}>
-            <source src={Movie} />
-          </Player> */}
-          <ContactForm></ContactForm>
+          <ContactForm />
+          <AboutUs />
         </div>
       </div>
-
-      {/* <div className="infoCard">
-              <div className="context">
-                <p>hello this is some context within the card</p>
-              </div>
-            </div> */}
     </div>
   );
 };

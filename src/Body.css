@@ -45,7 +45,7 @@
   transition: opacity 1s ease-in-out; */
   position: relative;
   /* animation: Move-img-right 3s; */
-  animation: fadeIn 7s;
+  animation: fadeIn 2s;
 }
 
 .collapsible-div {
@@ -73,6 +73,8 @@
   text-align: center;
   margin-left: 10%;
   margin-top: 12%;
+  justify-content: center;
+  align-items: center;
 }
 
 .greetingBox {
@@ -87,7 +89,7 @@
   text-align: center;
 
   font-size: 38px;
-  animation: fadeIn 7s;
+  animation: fadeIn 2s;
 }
 
 @supports (backdrop-filter: blur(1px)) {
@@ -175,26 +177,31 @@ h5 {
 
 .form-input {
   padding: 15px;
-  color: white;
-  background-color: #2f5199;
+  color: #2f5199;
   width: 50%;
+  margin-left: 5%;
 }
 
 .centered-form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 15px;
-  color: white;
-  background-color: #2f5199;
+  /* background-image: linear-gradient(to right, #4e82f196, #2f5199); */
 }
 
 .form-parent {
   padding: 20px;
   border-radius: 5px;
+  justify-content: center;
+  align-items: center;
   max-width: 400px;
   width: 100%;
+  background-color: #2f5199;
+  box-shadow: 0 0 5px 20px rgba(19, 19, 19, 0.06);
+  /* From https://css.glass */
+  background: rgba(47, 81, 153, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
 }
 
 .prefix-input {
@@ -203,6 +210,19 @@ h5 {
 
 option {
   font-size: large;
+}
+
+.submit-button {
+  color: white;
+  background-color: rgb(192, 206, 243);
+  width: 200px;
+  box-shadow: 0 0 2px 2px rgba(128, 149, 240, 0.932);
+  border-radius: 10px;
+  border-color: #2f5199;
+  border-width: 0 0px 1px 2px;
+  padding: 5px;
+  font-family: "Rajdhani", sans-serif;
+  align-content: center;
 }
 
 option,
@@ -229,10 +249,64 @@ textarea {
   height: 150px;
 }
 
+.column {
+  float: left;
+  width: 33.33%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .contact-us {
   margin: auto;
   width: 50%;
   margin-left: 20%;
+  color: white;
+}
+
+.facebook-logo {
+  width: 14%;
+  padding-left: 5%;
+  margin-top: 5%;
+}
+.insta-logo {
+  width: 15%;
+}
+
+.google-map {
+  width: 400px;
+  border-color: #2f5199;
+  border-radius: 15px;
+  margin-top: 20%;
+}
+
+.phone-numbers {
+  color: #2f5199;
+  margin: 40px;
+}
+
+.about-us-parent {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  /* From https://css.glass */
+  background: rgba(47, 81, 153, 0.69);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(47, 81, 153, 0.31);
+}
+
+.big-as-logo {
+  position: relative;
+  width: 100px;
 }
 
 .PhoneInputCountryIconImg {
@@ -296,19 +370,16 @@ textarea {
 }
 
 .as-logo-shield {
-  position: absolute;
-  top: 53%;
+  position: relative;
   width: 200px;
-  transform: translate(-50%, -50%);
+  margin-top: 20%;
+  justify-content: center;
+  align-items: center;
 }
 
 .infoCard:hover .context {
   height: 150px;
 }
-
-/* .foo {
-  position: absolute;
-} */
 
 .our-services {
   color: white;
@@ -388,7 +459,8 @@ textarea {
   /* The image used */
   background-image: url("../src/images/semi-stock-banner-2.jpg");
   /* Set a specific height */
-  height: 70vh;
+  height: 100vh;
+  /* TODO For larger screens set to 70, middle and smaller set to 100vh */
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -407,7 +479,7 @@ textarea {
   position: relative;
 }
 
-.servicesMural {
+.services-mural {
   display: grid;
 }
 
