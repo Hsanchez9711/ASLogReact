@@ -72,7 +72,7 @@
   width: 80%;
   text-align: center;
   margin-left: 10%;
-  margin-top: 12%;
+  margin-top: 5%;
   justify-content: center;
   align-items: center;
 }
@@ -161,7 +161,7 @@ button:hover {
 } */
 
 .icons-and-services {
-  margin-top: 20%;
+  margin-top: 10%;
   position: absolute;
   width: 100%;
 }
@@ -253,6 +253,7 @@ textarea {
   float: left;
   width: 33.33%;
   margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,12 +273,12 @@ textarea {
 }
 
 .facebook-logo {
-  width: 14%;
+  width: 9%;
   padding-left: 5%;
   margin-top: 5%;
 }
 .insta-logo {
-  width: 15%;
+  width: 10%;
 }
 
 .google-map {
@@ -302,6 +303,24 @@ textarea {
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   border: 1px solid rgba(47, 81, 153, 0.31);
+}
+
+.scroll-to-top-btn {
+  position: fixed; /* Make it float */
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  z-index: 99; /* Ensure it's on top of other elements */
+  border: none; /* No border */
+  outline: none; /* No outline */
+  background-color: #333; /* Dark background */
+  color: black; /* White text */
+  cursor: pointer; /* Hand cursor on hover */
+  padding: 10px 20px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #555; /* Slightly lighter background on hover */
 }
 
 .big-as-logo {
@@ -372,7 +391,7 @@ textarea {
 .as-logo-shield {
   position: relative;
   width: 200px;
-  margin-top: 20%;
+  margin-top: 10%;
   justify-content: center;
   align-items: center;
 }
@@ -459,7 +478,7 @@ textarea {
   /* The image used */
   background-image: url("../src/images/semi-stock-banner-2.jpg");
   /* Set a specific height */
-  height: 100vh;
+  height: 600px;
   /* TODO For larger screens set to 70, middle and smaller set to 100vh */
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -471,7 +490,7 @@ textarea {
   /* The image used */
   background-image: url("../src/images/parked-semis.jpg");
   /* Set a specific height */
-  height: 100vh;
+  height: 700px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -486,7 +505,7 @@ textarea {
 .servicesBanner {
   width: 100%;
   float: right;
-  margin-top: 15%;
+  margin-top: 5%;
 }
 
 .content {

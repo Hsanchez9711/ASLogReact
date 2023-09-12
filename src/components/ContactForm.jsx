@@ -87,7 +87,7 @@ const ContactForm = () => {
           </a>
         </div>
       </div>
-      <div className="column">
+      <div className="column" id="contact-section">
         <form className="form-parent" onSubmit={handleSubmit}>
           <h1 className="contact-us">
             <b>Request Info</b>

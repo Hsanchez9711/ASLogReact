@@ -6,6 +6,7 @@ import "../../src/Body.css";
 import Tabs from "./Tabs.jsx";
 import ContactForm from "./ContactForm.jsx";
 import AboutUs from "./AboutUs.jsx";
+import scrollToTop from "./utils.js";
 
 function toggleTab(tabNumber) {
   const content = document.getElementById(`tab-content-${tabNumber}`);
@@ -27,9 +28,11 @@ const Body = props => {
         <button className="homeBtn" type="button">
           <b>Home</b>
         </button>
-        <button className="aboutBtn" type="button">
-          <b>About Us</b>
-        </button>
+        <a href="#about-us-section">
+          <button className="aboutBtn" type="button" href="#about-us-section">
+            <b>About Us</b>
+          </button>
+        </a>
         <a href="#services-section">
           <button
             className="servicesBtn"
@@ -39,12 +42,8 @@ const Body = props => {
             <b>Our Services</b>
           </button>
         </a>
-        <a href="#contact-form">
-          <button
-            className="contactBtn"
-            type="button"
-            onClick="document.getElementById('contact-form').scrollIntoView();"
-          >
+        <a href="#contact-section">
+          <button className="contactBtn" type="button" href="#contact-section">
             <b>Contact Us</b>
           </button>
         </a>
@@ -91,6 +90,13 @@ const Body = props => {
             alt="A.S. Logistics logo with shield background"
           />
         </div>
+        <button
+          id="scrollToTopButton"
+          className="scroll-to-top-btn"
+          onclick={scrollToTop()}
+        >
+          Scroll to Top
+        </button>
         <div className="our-services">
           <div className="servicesIcons">
             <div className="servicesMural">
@@ -107,7 +113,7 @@ const Body = props => {
             </div>
           </div>
           <ContactForm />
-          <AboutUs />
+          <AboutUs id="about-us-section" />
         </div>
       </div>
     </div>
