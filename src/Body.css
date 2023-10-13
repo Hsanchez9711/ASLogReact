@@ -87,7 +87,6 @@
   color: white;
   transform: translate(-50%, -50%);
   text-align: center;
-
   font-size: 38px;
   animation: fadeIn 2s;
 }
@@ -249,7 +248,7 @@ textarea {
   height: 150px;
 }
 
-.column {
+.contact-column {
   float: left;
   width: 33.33%;
   margin-top: 5%;
@@ -273,7 +272,7 @@ textarea {
 }
 
 .facebook-logo {
-  width: 9%;
+  width: 10%;
   padding-left: 5%;
   margin-top: 5%;
 }
@@ -478,7 +477,7 @@ textarea {
   /* The image used */
   background-image: url("../src/images/semi-stock-banner-2.jpg");
   /* Set a specific height */
-  height: 600px;
+  height: 700px;
   /* TODO For larger screens set to 70, middle and smaller set to 100vh */
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -580,5 +579,34 @@ textarea {
   }
   100% {
     top: 0em;
+  }
+}
+/* Mobile View for mobile phones */
+@media (max-width: 480px) {
+  .contact-column {
+    width: 100%; /* Takes up the full width of the container */
+  }
+
+  .parallax {
+    height: 300px;
+    background-attachment: scroll; /* Sets to scroll on default for smaller screens d*/
+  }
+
+  .parallax-two {
+    height: 720px;
+  }
+
+  .tab-header {
+    padding: 5px;
+  }
+
+  .greetingBox {
+    position: absolute;
+    top: 3%;
+    margin-top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    color: #2f5199;
   }
 }

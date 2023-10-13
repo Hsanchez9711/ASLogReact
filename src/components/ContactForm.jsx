@@ -43,9 +43,27 @@ const ContactForm = () => {
     }));
   };
 
+  const formatEmailMessage = () => {
+    // consider adding some more verification for this function
+    const completeName =
+      formData.prefix + " " + formData.firstName + " " + formData.lastName;
+    const completeContact = phoneNumber + " " + formData.email;
+    const message =
+      "Hello A.S. Logstics Corp, I am interested in your services and would like to receive more information, please contact me regarding: " +
+      formData.message +
+      ". You can reach me (" +
+      completeName +
+      ") at the following phone number and email address: " +
+      completeContact +
+      ". We look forward to hearing from you regarding these inquiries!";
+
+    var messageBody = "&body=" + encodeURIComponent(message);
+    return messageBody;
+  };
+
   return (
     <div className="row">
-      <div className="column">
+      <div className="contact-column">
         <div className="phone-numbers">
           <h1> Contact Us </h1>
           <h3>
@@ -87,7 +105,7 @@ const ContactForm = () => {
           </a>
         </div>
       </div>
-      <div className="column" id="contact-section">
+      <div className="contact-column" id="contact-section">
         <form className="form-parent" onSubmit={handleSubmit}>
           <h1 className="contact-us">
             <b>Request Info</b>
@@ -168,12 +186,17 @@ const ContactForm = () => {
               required
             />
           </div>
-          <button className="submit-button" type="submit">
-            Submit
-          </button>
+          <a
+            href={
+              "mailto:hectorsanchez97@yahoo.com?subject=Further%20Inquiry&body=" +
+              formatEmailMessage()
+            }
+          >
+            Email with Subject and Body
+          </a>
         </form>
       </div>
-      <div className="column">
+      <div className="contact-column">
         <iframe
           className="google-map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.564434661254!2d-106.23885022487111!3d31.755087935509046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e74110765a18b3%3A0x6bf0c9bd2c922946!2sA.S.%20Logistics%20Corp!5e0!3m2!1sen!2sus!4v1691275415039!5m2!1sen!2sus"
