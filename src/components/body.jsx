@@ -7,6 +7,7 @@ import Tabs from "./Tabs.jsx";
 import ContactForm from "./ContactForm.jsx";
 import AboutUs from "./AboutUs.jsx";
 import scrollToTop from "./utils.js";
+import MobileNavBar from "./MobileNavBar";
 
 function toggleTab(tabNumber) {
   const content = document.getElementById(`tab-content-${tabNumber}`);
@@ -25,34 +26,38 @@ const Body = props => {
   return (
     <div className="firstPage">
       <div className="Header">
-        <button className="homeBtn" type="button">
-          <b>Home</b>
-        </button>
-        <a href="#about-us-section">
-          <button className="aboutBtn" type="button" href="#about-us-section">
-            <b>About Us</b>
-          </button>
-        </a>
-        <a href="#services-section">
-          <button
-            className="servicesBtn"
-            type="button"
-            href="#services-section"
-          >
-            <b>Our Services</b>
-          </button>
-        </a>
-        <a href="#contact-section">
-          <button className="contactBtn" type="button" href="#contact-section">
-            <b>Contact Us</b>
-          </button>
-        </a>
-        <div className="logo-container">
-          <img
-            className="AS-logo"
-            src={logo}
-            alt="A.S. Logistics Corporation Logo in white"
-          />
+        <MobileNavBar />
+        <div className="desktop-header-buttons">
+          <a href="#about-us-section">
+            <button className="aboutBtn" type="button" href="#about-us-section">
+              <b>About Us</b>
+            </button>
+          </a>
+          <a href="#services-section">
+            <button
+              className="servicesBtn"
+              type="button"
+              href="#services-section"
+            >
+              <b>Our Services</b>
+            </button>
+          </a>
+          <a href="#contact-section">
+            <button
+              className="contactBtn"
+              type="button"
+              href="#contact-section"
+            >
+              <b>Contact Us</b>
+            </button>
+          </a>
+          <div className="logo-container">
+            <img
+              className="AS-logo"
+              src={logo}
+              alt="A.S. Logistics Corporation Logo in white"
+            />
+          </div>
         </div>
       </div>
       <div className="body">
