@@ -6,7 +6,6 @@ import "../../src/Body.css";
 import Tabs from "./Tabs.jsx";
 import ContactForm from "./ContactForm.jsx";
 import AboutUs from "./AboutUs.jsx";
-import scrollToTop from "./utils.js";
 import MobileNavBar from "./MobileNavBar";
 
 function toggleTab(tabNumber) {
@@ -64,10 +63,10 @@ const Body = props => {
         <div className="testing parallax" />
         <div className="greetingBox">
           {" "}
-          <h3>
+          <h3 className="main-greeting-text">
             <b>Welcome to A.S. Logistic Corporation</b>
           </h3>
-          <h6>
+          <h6 className="sub-greeting-text">
             Where On Time Delivery is{" "}
             <i>
               <b>always </b>
@@ -95,13 +94,6 @@ const Body = props => {
             alt="A.S. Logistics logo with shield background"
           />
         </div>
-        <button
-          id="scrollToTopButton"
-          className="scroll-to-top-btn"
-          onclick={scrollToTop()}
-        >
-          Scroll to Top
-        </button>
         <div className="our-services">
           <div className="servicesIcons">
             <div className="servicesMural">

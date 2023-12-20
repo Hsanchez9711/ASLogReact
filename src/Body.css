@@ -160,6 +160,24 @@ h5 {
   margin-left: 5%;
 }
 
+.form-submit-btn {
+  display: inline-block; /* Make it a block-level element */
+  padding: 10px 20px; /* Adjust padding to your preference */
+  background-color: #2f5199; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none; /* Remove underline on the link */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Show a pointer cursor on hover */
+  font-size: 16px; /* Adjust font size to your preference */
+  text-align: center; /* Center text horizontally */
+  transition: background-color 0.3s, color 0.3s; /* Add a smooth hover effect */
+}
+
+.form-submit-btn:hover {
+  background-color: #78c4ff; /* Change background color on hover */
+}
+
 .centered-form {
   display: flex;
   /* background-image: linear-gradient(to right, #4e82f196, #2f5199); */
@@ -231,7 +249,6 @@ textarea {
   float: left;
   width: 33.33%;
   margin-top: 5%;
-  margin-bottom: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -297,13 +314,10 @@ textarea {
   border-radius: 5px; /* Rounded corners */
 }
 
-.scroll-to-top-btn:hover {
-  background-color: #555; /* Slightly lighter background on hover */
-}
-
 .big-as-logo {
   position: relative;
-  width: 100px;
+  width: 100%;
+  height: 1000px;
 }
 
 .PhoneInputCountryIconImg {
@@ -323,12 +337,7 @@ textarea {
   font-weight: bold;
 }
 
-.tabs-container {
-  display: flex;
-}
-
-.tab {
-  display: flex;
+.services-tab {
   flex-direction: row;
   align-items: center;
 }
@@ -435,17 +444,6 @@ textarea {
   margin-top: 0%;
 }
 
-. @media (prefers-reduced-motion: no-preference) {
-  /* .App-logo,
-  .Above-logo {
-    animation: Transition-images-in 1s;
-  } */
-
-  /* .AS-logo {
-    animation: Move-Image-Right 5s;
-  } */
-}
-
 .mainBanner {
   width: 100%;
   height: 400px;
@@ -469,6 +467,17 @@ textarea {
   background-image: url("../src/images/parked-semis.jpg");
   /* Set a specific height */
   height: 700px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.parallax-pattern-bg {
+  background-image: url("../src/images/aslogrepeatingpattern.png");
+  /* Set a specific height */
+  height: 600px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -577,12 +586,26 @@ textarea {
     animation: fadeIn 2s;
   }
 
+  .contact-column {
+    margin-bottom: 5%;
+  }
+
   .Header {
     width: 100%;
     height: 90px; /* Adjust the height as needed */
     color: #fff;
   }
+
+  .services-tab {
+    display: flex;
+  }
+
+  .tabs-container {
+    display: flex;
+  }
 }
+
+/* TODO Need to account for middle screens less than 1550 */
 /* Mobile View for mobile phones */
 @media (max-width: 480px) {
   .AS-logo {
@@ -598,6 +621,11 @@ textarea {
     /* animation: Move-img-right 3s; */
     animation: fadeIn 2s;
   }
+
+  .as-logo-shield {
+    width: 120px;
+  }
+
   .contact-column {
     width: 100%; /* Takes up the full width of the container */
   }
@@ -622,9 +650,18 @@ textarea {
     animation: fadeIn 2s;
   }
 
+  .form-input {
+    width: 250px;
+  }
+
+  .form-parent {
+    width: 350px;
+  }
+
   .parallax {
     height: 300px;
     background-attachment: scroll; /* Sets to scroll on default for smaller screens d*/
+    margin-top: 10%;
   }
 
   .parallax-two {
@@ -633,6 +670,10 @@ textarea {
 
   .tab-header {
     padding: 5px;
+  }
+
+  .tabs-container {
+    margin-top: 5%;
   }
 
   * {
@@ -645,6 +686,25 @@ textarea {
     font-family: "Poppins", sans-serif;
   }
 
+  input,
+  select,
+  textarea {
+    width: 250px;
+  }
+
+  .main-greeting-text {
+    display: none;
+  }
+
+  .sub-greeting-text {
+    font-size: 16px;
+    margin-bottom: 20%;
+  }
+
+  .google-map {
+    width: 350px;
+  }
+
   .container {
     max-width: 1050px;
     width: 90%;
@@ -652,9 +712,13 @@ textarea {
   }
 
   .navbar {
+    position: fixed;
+    background-color: #2f5199;
+    top: 0;
     width: 100%;
     box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
     display: block;
+    z-index: 1000;
   }
 
   .nav-container {
@@ -754,6 +818,10 @@ textarea {
     margin-bottom: 1.2rem;
     font-size: 1.5rem;
     font-weight: 500;
+  }
+
+  li:hover {
+    background-color: #78c4ff;
   }
 
   .logo {

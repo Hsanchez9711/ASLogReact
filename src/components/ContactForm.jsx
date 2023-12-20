@@ -94,7 +94,7 @@ const ContactForm = () => {
               Physical Address:
               <br />
             </u>{" "}
-            13979 Windermere Ave, El Paso, TX 79928
+            13979 Windermere Ave, El Paso, TX 79928 Monday-Friday 9am - 5pm
             <br />{" "}
           </h3>
           <a href="https://www.instagram.com/a.s.logisticscorp/?igshid=MzRlODBiNWFlZA%3D%3D">
@@ -108,7 +108,7 @@ const ContactForm = () => {
       <div className="contact-column" id="contact-section">
         <form className="form-parent" onSubmit={handleSubmit}>
           <h1 className="contact-us">
-            <b>Request Info</b>
+            <b>Request a Quote</b>
           </h1>
           <div className="form-input prefix-input">
             <label htmlFor="prefix" />
@@ -180,19 +180,20 @@ const ContactForm = () => {
             <textarea
               id="message"
               name="message"
-              placeholder="Please tell us more about your inquiry"
+              placeholder="Please tell us more about your needs"
               value={formData.message}
               onChange={handleChange}
               required
             />
           </div>
           <a
+            className="form-submit-btn"
             href={
               "mailto:hectorsanchez97@yahoo.com?subject=Further%20Inquiry&body=" +
               formatEmailMessage()
             }
           >
-            Email with Subject and Body
+            Create Request
           </a>
         </form>
       </div>

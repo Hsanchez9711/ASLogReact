@@ -20,13 +20,13 @@ const MobileNavBar = () => {
             />
           </div>
           <div class="menu-items">
-            <li>
+            <li className="mobile-nav-btn">
               <a href="#about-us-section">About Us</a>
             </li>
-            <li>
+            <li className="mobile-nav-btn">
               <a href="#services-section">Our Services</a>
             </li>
-            <li>
+            <li className="mobile-nav-btn">
               <a href="#contact-section">Contact Us</a>
             </li>
           </div>

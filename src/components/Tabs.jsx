@@ -10,7 +10,7 @@ import "./Tabs.css";
 // Tab component
 const Tab = ({ title, content, isOpen, toggleTab, icon }) => {
   return (
-    <div className="tab">
+    <div className="services-tab">
       <img
         className="icon"
         src={icon}
