@@ -60,10 +60,10 @@
   align-items: center;
 }
 
-.greetingBox {
+.greeting-box {
   border-radius: 1rem;
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 70%;
   font-family: "Open Sans", sans-serif;
   font-family: "Rajdhani", sans-serif;
@@ -75,7 +75,7 @@
 }
 
 @supports (backdrop-filter: blur(1px)) {
-  .greetingBox {
+  .greeting-box {
     /* backdrop-filter: blur(1px); */
   }
 }
@@ -127,6 +127,11 @@ button:hover {
   width: 50px;
 }
 
+.profile-icon {
+  width: 3%;
+  margin-right: 2%;
+}
+
 .info {
   display: flex;
   align-items: center;
@@ -151,13 +156,6 @@ h1 {
 h5 {
   padding-left: 20px;
   color: white;
-}
-
-.form-input {
-  padding: 15px;
-  color: #2f5199;
-  width: 50%;
-  margin-left: 5%;
 }
 
 .form-submit-btn {
@@ -193,15 +191,12 @@ h5 {
   background-color: #2f5199;
   box-shadow: 0 0 5px 20px rgba(19, 19, 19, 0.06);
   /* From https://css.glass */
-  background: rgba(47, 81, 153, 0.16);
+  background: rgba(255, 255, 255, 0.952);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.1px);
-  -webkit-backdrop-filter: blur(1.1px);
-}
-
-.prefix-input {
-  text-align: left;
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border: 1px solid rgba(255, 255, 255, 0.39);
 }
 
 option {
@@ -262,18 +257,17 @@ textarea {
 
 .contact-us {
   margin: auto;
-  width: 50%;
+  width: 60%;
   margin-left: 20%;
-  color: white;
+  color: #2f5199;
 }
 
 .facebook-logo {
-  width: 10%;
+  width: 8%;
   padding-left: 5%;
-  margin-top: 5%;
 }
 .insta-logo {
-  width: 10%;
+  width: 8%;
 }
 
 .google-map {
@@ -284,8 +278,9 @@ textarea {
 }
 
 .phone-numbers {
-  color: #2f5199;
+  color: white;
   margin: 40px;
+  margin-top: 0;
 }
 
 .about-us-parent {
@@ -293,7 +288,7 @@ textarea {
   height: 600px;
   position: absolute;
   /* From https://css.glass */
-  background: rgba(47, 81, 153, 0.69);
+  /* background: rgba(47, 81, 153, 0.69); */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
@@ -315,9 +310,10 @@ textarea {
 }
 
 .big-as-logo {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 1000px;
+  margin-top: 40%;
 }
 
 .PhoneInputCountryIconImg {
@@ -353,8 +349,13 @@ textarea {
 }
 
 .logo-container {
-  width: 100%; /* Optional - Adjust the width as needed */
-  text-align: center;
+  position: absolute;
+  width: 100%;
+  margin-top: 25px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
 .context {
@@ -474,17 +475,6 @@ textarea {
   position: relative;
 }
 
-.parallax-pattern-bg {
-  background-image: url("../src/images/aslogrepeatingpattern.png");
-  /* Set a specific height */
-  height: 600px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
 .services-mural {
   display: grid;
 }
@@ -576,18 +566,20 @@ textarea {
 /* Desktop and Tablet view */
 @media (min-width: 768px) {
   .AS-logo {
-    width: 10%;
-    margin-top: 1%;
-    pointer-events: none;
-    right: 15%;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    height: 40px;
+    /* margin-top: 8%; */
+    /* margin-top: 1%; */
+    /* pointer-events: none; */
+    /* right: 15%; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: relative; */
     animation: fadeIn 2s;
   }
 
   .contact-column {
     margin-bottom: 5%;
+    position: relative;
   }
 
   .Header {
@@ -605,7 +597,61 @@ textarea {
   }
 }
 
-/* TODO Need to account for middle screens less than 1550 */
+@media (min-width: 1650px) {
+  .form-input {
+    padding: 15px;
+    color: #2f5199;
+    width: 50%;
+    margin-left: 5%;
+  }
+}
+
+/* large tablet and small desktop view */
+@media (max-width: 1650px) {
+  .greeting-box {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .form-input {
+    padding: 15px;
+    color: #2f5199;
+  }
+  .form-parent {
+    width: 350px;
+  }
+  .google-map {
+    width: 80%;
+  }
+  .greeting-box {
+    width: 100%;
+    top: 4%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  input,
+  textarea {
+    width: 250px;
+  }
+  select {
+    width: 270px;
+  }
+  /* .logo-container {
+    width: 25%;
+  } */
+  .parallax {
+    height: 400px;
+    background-attachment: scroll; /* Sets to scroll on default for smaller screens d*/
+  }
+
+  .parallax-two {
+    height: 720px;
+  }
+}
+
 /* Mobile View for mobile phones */
 @media (max-width: 480px) {
   .AS-logo {
@@ -626,46 +672,36 @@ textarea {
     width: 120px;
   }
 
+  .big-as-logo {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    margin-top: 40%;
+  }
+
   .contact-column {
-    width: 100%; /* Takes up the full width of the container */
+    width: 100%;
+    position: relative;
   }
 
   .desktop-header-buttons {
     display: none;
   }
 
-  .greetingBox {
-    width: 80%;
-    border-radius: 1rem;
-    position: absolute;
-    top: 3%;
-    margin-bottom: 5px;
-    left: 50%;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Rajdhani", sans-serif;
-    color: #2f5199;
-    transform: translate(-50%, -50%);
+  .greeting-box {
+    width: 100%;
+    top: 2%;
+    left: 60%;
     text-align: center;
-    font-size: 18px;
-    animation: fadeIn 2s;
-  }
-
-  .form-input {
-    width: 250px;
-  }
-
-  .form-parent {
-    width: 350px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
   }
 
   .parallax {
     height: 300px;
     background-attachment: scroll; /* Sets to scroll on default for smaller screens d*/
     margin-top: 10%;
-  }
-
-  .parallax-two {
-    height: 720px;
   }
 
   .tab-header {
@@ -686,23 +722,20 @@ textarea {
     font-family: "Poppins", sans-serif;
   }
 
-  input,
-  select,
-  textarea {
-    width: 250px;
-  }
-
   .main-greeting-text {
     display: none;
   }
 
+  select {
+    width: 250px;
+  }
   .sub-greeting-text {
-    font-size: 16px;
-    margin-bottom: 20%;
+    font-size: 18px;
   }
 
   .google-map {
     width: 350px;
+    margin-bottom: 10%;
   }
 
   .container {
@@ -826,7 +859,6 @@ textarea {
 
   .logo {
     position: absolute;
-    top: 5px;
     right: 15px;
     font-size: 1.2rem;
     color: #0e2431;

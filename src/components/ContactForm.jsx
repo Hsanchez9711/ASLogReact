@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import PhoneInput from "react-phone-number-input";
-import fbLogo from "../images/1298738_facebook_brand_fb_logo_social media_icon.png";
+import fbLogo from "../images/facebook-light.png";
 import igLogo from "../images/instagram-icon.png";
+import repeatingBG from "../images/aslogrepeatingbg.png";
+import profileIcon from "../images/profile-circled-icon.png";
+import phoneIcon from "../images/phone-icon.png";
+import mailIcon from "../images/mail-icon.png";
+import homeIcon from "../images/home-icon.png";
 
 const ContactForm = () => {
   // State to manage form data
@@ -63,40 +68,78 @@ const ContactForm = () => {
 
   return (
     <div className="row">
+      <img className="big-as-logo" src={repeatingBG}></img>
       <div className="contact-column">
         <div className="phone-numbers">
           <h1> Contact Us </h1>
           <h3>
             {" "}
+            <img
+              className="profile-icon"
+              src={phoneIcon}
+              alt="small icon with in the shape of a phone"
+            />
             <u>Main Office:</u> (915) 590 - 2777{" "}
           </h3>
           <h3>
             {" "}
-            Ada Sanchez - President
-            <br /> Mobile: (915) 726 - 4491 <br />
-            Fax:(915) 852 - 0106 <br /> Email: ada@aslogisticsep.com <br />{" "}
-          </h3>
-          <h3>
-            Hector Sanchez - Operations Manager <br /> Mobile: (915) 471 - 5013{" "}
             <br />
+            <img
+              className="profile-icon"
+              src={profileIcon}
+              alt="small icon with default profile icon figure"
+            />
+            Ada Sanchez - President
+          </h3>
+          <h4>
+            Mobile: (915) 726 - 4491 <br />
+            Fax:(915) 852 - 0106 <br /> Email: ada@aslogisticsep.com <br />{" "}
+          </h4>
+          <h3>
+            <br />
+            <img
+              className="profile-icon"
+              src={profileIcon}
+              alt="small icon with default profile icon figure"
+            />
+            Hector Sanchez - Operations Manager
+          </h3>
+          <h4>
+            Mobile: (915) 471 - 5013 <br />
             Fax:915) 852- 0106
             <br /> Email: hsanchez@aslogisticsep.com
             <br />
-          </h3>
+          </h4>
           <h3>
+            <br />
+            <img
+              className="profile-icon"
+              src={mailIcon}
+              alt="small icon with a small envelope"
+            />
             <u>Mailing Address:</u>
-            <br /> 8900 Viscount Blvd. Suite # AN724
+          </h3>
+          <h4>
+            8900 Viscount Blvd. Suite # AN724
             <br /> El Paso, TX 79925
             <br />
-          </h3>
+          </h4>
           <h3>
+            <br />
+            <img
+              className="profile-icon"
+              src={homeIcon}
+              alt="small icon representing a home"
+            />
             <u>
               Physical Address:
               <br />
             </u>{" "}
+          </h3>
+          <h4>
             13979 Windermere Ave, El Paso, TX 79928 Monday-Friday 9am - 5pm
             <br />{" "}
-          </h3>
+          </h4>
           <a href="https://www.instagram.com/a.s.logisticscorp/?igshid=MzRlODBiNWFlZA%3D%3D">
             <img src={igLogo} className="insta-logo"></img>
           </a>

@@ -61,18 +61,15 @@ const Body = props => {
       </div>
       <div className="body">
         <div className="testing parallax" />
-        <div className="greetingBox">
+        <div className="greeting-box">
           {" "}
-          <h3 className="main-greeting-text">
-            <b>Welcome to A.S. Logistic Corporation</b>
-          </h3>
-          <h6 className="sub-greeting-text">
+          <h4 className="sub-greeting-text">
             Where On Time Delivery is{" "}
             <i>
               <b>always </b>
             </i>
             our priority
-          </h6>
+          </h4>
         </div>
         <div className="our-motto">
           <h1>
