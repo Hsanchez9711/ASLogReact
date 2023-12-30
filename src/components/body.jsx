@@ -24,17 +24,21 @@ function toggleTab(tabNumber) {
 const Body = props => {
   return (
     <div className="firstPage">
-      <div className="Header">
-        <MobileNavBar />
+      {/* <div className="Header">
+       
         <div className="desktop-header-buttons">
           <a href="#about-us-section">
-            <button className="aboutBtn" type="button" href="#about-us-section">
+            <button
+              className="header-button"
+              type="button"
+              href="#about-us-section"
+            >
               <b>About Us</b>
             </button>
           </a>
           <a href="#services-section">
             <button
-              className="servicesBtn"
+              className="header-button"
               type="button"
               href="#services-section"
             >
@@ -43,7 +47,7 @@ const Body = props => {
           </a>
           <a href="#contact-section">
             <button
-              className="contactBtn"
+              className="header-button"
               type="button"
               href="#contact-section"
             >
@@ -57,7 +61,20 @@ const Body = props => {
               alt="A.S. Logistics Corporation Logo in white"
             />
           </div>
-        </div>
+        </div> */}
+
+      <div>
+        <MobileNavBar />
+        <header>
+          <nav class="left-buttons">
+            <a href="#about-us-section">About Us</a>
+            <a href="#services-section">Our Services</a>
+            <a href="#contact-section">Contact Us</a>
+          </nav>
+          <div class="centered-logo">
+            <img src={logo} alt="Logo" />
+          </div>
+        </header>
       </div>
       <div className="body">
         <div className="testing parallax" />
@@ -106,8 +123,8 @@ const Body = props => {
               </div>
             </div>
           </div>
-          <ContactForm />
-          <AboutUs id="about-us-section" />
+
+          <ContactForm className="background-img" />
         </div>
       </div>
     </div>

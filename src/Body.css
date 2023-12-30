@@ -84,22 +84,23 @@
   width: 100%;
 }
 
-.homeBtn,
-.aboutBtn,
-.servicesBtn,
-.contactBtn {
+.desktop-header-buttons {
+  float: left;
+  margin-top: 25px;
+}
+
+/* .header-button {
   border: 2px solid #2f5199;
   border-radius: 5px;
   font-family: "Open Sans", sans-serif;
   font-family: "Rajdhani", sans-serif;
-  font-size: 15px;
-  /* border-width: medium; */
-  color: #fff;
+  font-size: 15px; */
+/* border-width: medium; */
+/* color: #fff;
   background-color: #2f5199;
   margin-top: 1.5%;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  float: left;
   left: 2%;
   padding: 0.5em 1em;
   cursor: pointer;
@@ -107,9 +108,9 @@
   -webkit-transition: ease-out 0.2s;
   -moz-transition: ease-out 0.2s;
   transition: ease-out 0.2s;
-}
+} */
 
-button:hover {
+a:hover {
   background-color: #78c4ff;
 }
 
@@ -223,6 +224,7 @@ select {
   border-radius: 10px;
   border-width: 0 0px 1px 2px;
   padding: 5px;
+  margin-bottom: 15px;
   font-family: "Rajdhani", sans-serif;
 }
 
@@ -233,6 +235,7 @@ textarea {
   border-width: 0 0px 1px 2px;
   width: 300px;
   padding: 10px;
+  margin-bottom: 15px;
   font-family: "Rajdhani", sans-serif;
 }
 
@@ -259,6 +262,7 @@ textarea {
   margin: auto;
   width: 60%;
   margin-left: 20%;
+  margin-bottom: 5%;
   color: #2f5199;
 }
 
@@ -295,7 +299,7 @@ textarea {
   border: 1px solid rgba(47, 81, 153, 0.31);
 }
 
-.scroll-to-top-btn {
+.about-us .scroll-to-top-btn {
   position: fixed; /* Make it float */
   bottom: 20px; /* Position from the bottom */
   right: 20px; /* Position from the right */
@@ -313,7 +317,7 @@ textarea {
   position: absolute;
   width: 100%;
   height: 1000px;
-  margin-top: 40%;
+  margin-top: 50%;
 }
 
 .PhoneInputCountryIconImg {
@@ -351,11 +355,44 @@ textarea {
 .logo-container {
   position: absolute;
   width: 100%;
-  margin-top: 25px;
+  margin-top: -2%;
   /* text-align: center; */
   display: flex;
   justify-content: center;
   height: 100vh;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #2f5199;
+  color: #fff;
+}
+
+.left-buttons {
+  display: flex;
+  margin-top: -1%;
+  border: 2px solid #2f5199;
+  font-size: 16px;
+}
+
+.left-buttons a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 25px; /* Add margin to separate the buttons */
+  margin-top: 2%;
+}
+
+.centered-logo {
+  text-align: center;
+}
+
+.centered-logo img {
+  height: 40px;
+  margin-top: -3%;
+  margin-bottom: 8px;
+  animation: fadeIn 2s;
 }
 
 .context {
@@ -378,7 +415,7 @@ textarea {
 
 .as-logo-shield {
   position: relative;
-  width: 200px;
+  width: 250px;
   margin-top: 10%;
   justify-content: center;
   align-items: center;
@@ -482,7 +519,6 @@ textarea {
 .servicesBanner {
   width: 100%;
   float: right;
-  margin-top: 5%;
 }
 
 .content {
@@ -604,6 +640,10 @@ textarea {
     width: 50%;
     margin-left: 5%;
   }
+
+  .servicesBanner {
+    margin-top: 5%;
+  }
 }
 
 /* large tablet and small desktop view */
@@ -626,7 +666,7 @@ textarea {
   }
   .greeting-box {
     width: 100%;
-    top: 4%;
+    top: 5%;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -672,11 +712,19 @@ textarea {
     width: 120px;
   }
 
+  .background-img {
+    background-image: url("../src/images/aslogrepeatingbg.png"); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    /* Optional: Set a fixed height for the div */
+  }
+
   .big-as-logo {
     position: absolute;
     width: 100%;
     height: 500px;
-    margin-top: 40%;
+    margin-top: 50%;
   }
 
   .contact-column {
@@ -684,13 +732,19 @@ textarea {
     position: relative;
   }
 
-  .desktop-header-buttons {
+  .facebook-logo {
+    width: 12%;
+  }
+
+  header,
+  .left-buttons,
+  .centered-logo {
     display: none;
   }
 
   .greeting-box {
     width: 100%;
-    top: 2%;
+    top: 3%;
     left: 60%;
     text-align: center;
     display: flex;
@@ -702,6 +756,10 @@ textarea {
     height: 300px;
     background-attachment: scroll; /* Sets to scroll on default for smaller screens d*/
     margin-top: 10%;
+  }
+
+  .parallax-two {
+    height: 775px;
   }
 
   .tab-header {
@@ -731,6 +789,7 @@ textarea {
   }
   .sub-greeting-text {
     font-size: 18px;
+    margin-left: 5%;
   }
 
   .google-map {

@@ -67,8 +67,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="row">
-      <img className="big-as-logo" src={repeatingBG}></img>
+    <div className="row background-img">
       <div className="contact-column">
         <div className="phone-numbers">
           <h1> Contact Us </h1>

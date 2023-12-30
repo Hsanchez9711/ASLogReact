@@ -1,25 +1,21 @@
 import React, { useState } from "react";
-import warehouseIcon from "../images/distribution-center.png";
-import flatbedIcon from "../images/container-3.png";
-import locationIcon from "../images/location.png";
-import ltlIcon from "../images/distribution-center-2.png";
-import otrIcon from "../images/cargo-truck.png";
-import documentsIcon from "../images/clipboard.png";
+
+
 import "./Tabs.css";
 
 // Tab component
-const Tab = ({ title, content, isOpen, toggleTab, icon }) => {
+const Tab = ({ title, className, content, isOpen, toggleTab, icon, altText }) => {
   return (
-    <div className="services-tab">
+    <div className="contact-tab">
       <img
-        className="icon"
+        className={className}
         src={icon}
-        alt={"Blue icon of a semi truck and warehouse."}
+        alt={altText}
       />
-      <h1 className="tab-header" onClick={toggleTab}>
+      <h1 className="contact-header" onClick={toggleTab}>
         {title}
       </h1>
-      {isOpen && <h3 className="tab-content">{content}</h3>}
+      {isOpen && <h6 className="contact-content">{content}</h6>}
     </div>
   );
 };
@@ -33,15 +29,16 @@ const ContactTabs = () => {
   };
 
   return (
-    <div className="tabs-container">
+    <div className="contact-tabs-container">
       <ul>
         <Tab
-          title="Warehousing Services"
+          title="Ada Sanchez - President"
           content="Safely stow cargo in our 24-hour monitored and secure 
           yard for as as long as you need."
           isOpen={openTab === 1}
           toggleTab={() => handleTabClick(1)}
           icon={warehouseIcon}
+          altText=""
         />
         <Tab
           title="Over the Road Transportation (OTR)"
