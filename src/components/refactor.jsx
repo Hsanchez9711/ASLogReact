@@ -42,7 +42,7 @@ const Body = props => {
         <div className="greeting-img parallax" />
         <div className="greeting-box">
           {" "}
-          <h4 className="">
+          <h4 className="sub-greeting-text">
             Where On Time Delivery is{" "}
             <i>
               <b>always </b>
@@ -56,7 +56,7 @@ const Body = props => {
         <h1>
           <b>Our Promise To Our Customers</b>
         </h1>
-        <h2>
+        <h3>
           Here at A.S. Logistics Corporation we consistently strive to provide
           unparalleled customer service and competitive pricing while never
           dismissing our motto: "On time delivery is always our priority".
@@ -65,7 +65,7 @@ const Body = props => {
           cutting-edge technology and equipment. So next time you are
           considering freight delivery consider A.S Logistic Corporation as your
           first choice!
-        </h2>
+        </h3>
         <img
           className="as-logo-shield"
           src={asLogoShield}

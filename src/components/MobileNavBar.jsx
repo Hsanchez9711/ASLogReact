@@ -12,13 +12,11 @@ const MobileNavBar = () => {
             <span class="line line2"></span>
             <span class="line line3"></span>
           </div>
-          <div class="logo">
-            <img
-              className="AS-logo"
-              src={logo}
-              alt="A.S. Logistics Corporation Logo in white"
-            />
-          </div>
+          <img
+            className="AS-logo"
+            src={logo}
+            alt="A.S. Logistics Corporation Logo in white"
+          />
           <div class="menu-items">
             <li className="mobile-nav-btn">
               <a href="#about-us-section">About Us</a>
