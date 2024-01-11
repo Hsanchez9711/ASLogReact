@@ -694,17 +694,26 @@ header {
   .google-map {
     width: 80%;
   }
-  /* .greeting-box {
-    width: 100%;
-    top: 5%;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-  } */
+  .greeting-box {
+    border-radius: 1rem;
+    position: absolute;
+    top: 8%;
+    left: 70%;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 38px;
+    animation: fadeIn 2s;
+  }
 
   input,
   textarea {
     width: 250px;
+  }
+  .image-container {
+    bottom: 27%;
   }
   select {
     width: 270px;
@@ -773,7 +782,7 @@ header {
   .greeting-box {
     border-radius: 1rem;
     position: absolute;
-    top: 4%;
+    top: 5%;
     left: 70%;
     font-family: "Open Sans", sans-serif;
     font-family: "Rajdhani", sans-serif;
