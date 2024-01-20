@@ -68,7 +68,7 @@ const ContactForm = () => {
 
   return (
     <div className="row background-img">
-      <div className="contact-column">
+      <div className="contact-column" id="contact-section">
         <div className="phone-numbers">
           <h1> Contact Us </h1>
           <h3>
@@ -147,7 +147,7 @@ const ContactForm = () => {
           </a>
         </div>
       </div>
-      <div className="contact-column" id="contact-section">
+      <div className="contact-column">
         <form className="form-parent" onSubmit={handleSubmit}>
           <h1 className="contact-us">
             <b>Request a Quote</b>

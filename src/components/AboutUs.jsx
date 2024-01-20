@@ -6,7 +6,7 @@ import managerHeadshot from "../images/andrea-headshot.png";
 const AboutUs = () => {
   return (
     <div className="about-us-parent">
-      <h1 className="about-us-title">
+      <h1 className="about-us-title" id="about-us-section">
         <b>About Us</b>
       </h1>
       <div className="about-us-body-container">

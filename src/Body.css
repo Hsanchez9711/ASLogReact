@@ -513,7 +513,7 @@ header {
 
 .parallax {
   /* The image used */
-  background-image: url("../src/images/semi-stock-banner-2.jpg");
+  background-image: url("../src/images/semi-main-logo.png");
   /* Set a specific height */
   height: 700px;
   /* TODO For larger screens set to 70, middle and smaller set to 100vh */
