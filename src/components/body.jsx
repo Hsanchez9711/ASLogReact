@@ -23,7 +23,7 @@ function toggleTab(tabNumber) {
 
 const Body = props => {
   return (
-    <div className="main-page">
+    <div className="main-page noto-sans-kr-font">
       <div className="header-container">
         <MobileNavBar />
         <header>
@@ -42,7 +42,7 @@ const Body = props => {
         <div className="greeting-img parallax" />
         <div className="greeting-box">
           {" "}
-          <h4 className="">
+          <h4 className="noto-sans-kr-font">
             Where On Time Delivery is{" "}
             <i>
               <b>always </b>

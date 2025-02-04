@@ -9,7 +9,7 @@ import "./Tabs.css";
 
 // Tab component
 const Tab = ({ title, content, isOpen, toggleTab, icon }) => {
-  return (
+  return !isOpen ? (
     <div className="services-tab">
       <img
         className="icon"
@@ -19,7 +19,10 @@ const Tab = ({ title, content, isOpen, toggleTab, icon }) => {
       <h1 className="tab-header" onClick={toggleTab}>
         {title}
       </h1>
-      {isOpen && <h3 className="tab-content">{content}</h3>}
+    </div>
+  ) : (
+    <div className="services-tab">
+      <h3 className="tab-content">{content}</h3>
     </div>
   );
 };
@@ -33,54 +36,52 @@ const Tabs = () => {
   };
 
   return (
-    <div className="tabs-container">
-      <ul>
-        <Tab
-          title="Warehousing Services"
-          content="Safely stow cargo in our 24-hour monitored and secure 
+    <div className="tabs-container noto-sans-kr-font">
+      <Tab
+        title="Warehousing Services"
+        content="Safely stow cargo in our 24-hour monitored and secure 
           yard for as as long as you need."
-          isOpen={openTab === 1}
-          toggleTab={() => handleTabClick(1)}
-          icon={warehouseIcon}
-        />
-        <Tab
-          title="Over the Road Transportation (OTR)"
-          content="Move freight from just about anywhere in the nation using our extensive Over-the-Road transport expertise and tracking services."
-          isOpen={openTab === 2}
-          toggleTab={() => handleTabClick(2)}
-          icon={otrIcon}
-        />
-        <Tab
-          title="Less-Than-Truckload (LTL) Breakdown"
-          content="For those smaller
+        isOpen={openTab === 1}
+        toggleTab={() => handleTabClick(1)}
+        icon={warehouseIcon}
+      />
+      <Tab
+        title="Over the Road Transportation (OTR)"
+        content="Move freight from just about anywhere in the nation using our extensive Over-the-Road transport expertise and tracking services."
+        isOpen={openTab === 2}
+        toggleTab={() => handleTabClick(2)}
+        icon={otrIcon}
+      />
+      <Tab
+        title="Less-Than-Truckload (LTL) Breakdown"
+        content="For those smaller
           truckloads, cargo breakdown and individual shipments of breakdown are made easy."
-          isOpen={openTab === 3}
-          toggleTab={() => handleTabClick(3)}
-          icon={ltlIcon}
-        />
-        <Tab
-          title="Clearance of Documents"
-          content="Import and export clearance, Mexican Customs clearance, and bonded warehouse availability"
-          isOpen={openTab === 4}
-          toggleTab={() => handleTabClick(4)}
-          icon={documentsIcon}
-        />
-        <Tab
-          title="Flatbed Trailer Services"
-          content=" For that cargo where a container simply won't cut it, our 
+        isOpen={openTab === 3}
+        toggleTab={() => handleTabClick(3)}
+        icon={ltlIcon}
+      />
+      <Tab
+        title="Clearance of Documents"
+        content="Import and export clearance, Mexican Customs clearance, and bonded warehouse availability"
+        isOpen={openTab === 4}
+        toggleTab={() => handleTabClick(4)}
+        icon={documentsIcon}
+      />
+      <Tab
+        title="Flatbed Trailer Services"
+        content=" For that cargo where a container simply won't cut it, our 
           flat-bed trailers and highly-experienced crew can be the perfect solution!"
-          isOpen={openTab === 5}
-          toggleTab={() => handleTabClick(5)}
-          icon={flatbedIcon}
-        />
-        <Tab
-          title="Local Drayage Services"
-          content="Efficiently transport and deliver freight locally and regionally, including pickups from Union Pacific Railroad and local airports."
-          isOpen={openTab === 6}
-          toggleTab={() => handleTabClick(6)}
-          icon={locationIcon}
-        />
-      </ul>
+        isOpen={openTab === 5}
+        toggleTab={() => handleTabClick(5)}
+        icon={flatbedIcon}
+      />
+      <Tab
+        title="Local Drayage Services"
+        content="Efficiently transport and deliver freight locally and regionally, including pickups from Union Pacific Railroad and local airports."
+        isOpen={openTab === 6}
+        toggleTab={() => handleTabClick(6)}
+        icon={locationIcon}
+      />
       {/* Add more tabs as needed */}
     </div>
   );
