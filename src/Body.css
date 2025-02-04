@@ -915,7 +915,6 @@ header {
   }
 
   .image-container {
-    width: 80%;
     bottom: 39%;
   }
   .input-fields-group{ 
@@ -949,7 +948,7 @@ header {
   }
 
   .parallax {
-    height: 350px;
+    height: 330px;
   }
 
   .parallax-two {
