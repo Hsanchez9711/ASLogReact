@@ -1,31 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e722198.chunk.css",
-    "main.js": "/static/js/main.cd4df869.chunk.js",
-    "main.js.map": "/static/js/main.cd4df869.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ec2b6984.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ec2b6984.js.map",
-    "static/js/2.a0882c8e.chunk.js": "/static/js/2.a0882c8e.chunk.js",
-    "static/js/2.a0882c8e.chunk.js.map": "/static/js/2.a0882c8e.chunk.js.map",
-    "static/js/3.09e3c108.chunk.js": "/static/js/3.09e3c108.chunk.js",
-    "static/js/3.09e3c108.chunk.js.map": "/static/js/3.09e3c108.chunk.js.map",
+    "main.css": "/static/css/main.e9911ee3.chunk.css",
+    "main.js": "/static/js/main.cfa300f5.chunk.js",
+    "main.js.map": "/static/js/main.cfa300f5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6aeb90b0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6aeb90b0.js.map",
+    "static/js/2.85b4e286.chunk.js": "/static/js/2.85b4e286.chunk.js",
+    "static/js/2.85b4e286.chunk.js.map": "/static/js/2.85b4e286.chunk.js.map",
+    "static/js/3.9744ba15.chunk.js": "/static/js/3.9744ba15.chunk.js",
+    "static/js/3.9744ba15.chunk.js.map": "/static/js/3.9744ba15.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5e722198.chunk.css.map": "/static/css/main.5e722198.chunk.css.map",
-    "static/js/2.a0882c8e.chunk.js.LICENSE.txt": "/static/js/2.a0882c8e.chunk.js.LICENSE.txt",
-    "static/media/LogoNoBGWhite.a67ac529.png": "/static/media/LogoNoBGWhite.a67ac529.png",
-    "static/media/aslogrepeatingbg.c8174200.png": "/static/media/aslogrepeatingbg.c8174200.png",
-    "static/media/clipboard.1a55f78e.png": "/static/media/clipboard.1a55f78e.png",
-    "static/media/distribution-center-2.93ce8c30.png": "/static/media/distribution-center-2.93ce8c30.png",
-    "static/media/distribution-center.4e4aed75.png": "/static/media/distribution-center.4e4aed75.png",
-    "static/media/instagram-icon.e403234c.png": "/static/media/instagram-icon.e403234c.png",
-    "static/media/location.1a9b7314.png": "/static/media/location.1a9b7314.png",
-    "static/media/Body.css": "/static/media/semi-stock-banner-2.c9bfe993.jpg",
-    "static/media/revisedlogo.5cece128.png": "/static/media/revisedlogo.5cece128.png"
+    "static/css/main.e9911ee3.chunk.css.map": "/static/css/main.e9911ee3.chunk.css.map",
+    "static/js/2.85b4e286.chunk.js.LICENSE.txt": "/static/js/2.85b4e286.chunk.js.LICENSE.txt",
+    "static/media/ASLLOGO.c60c8680.PNG": "/static/media/ASLLOGO.c60c8680.PNG",
+    "static/media/adobe.d1a55779.jpeg": "/static/media/adobe.d1a55779.jpeg",
+    "static/media/elPasoSkyline.759d47c9.jpg": "/static/media/elPasoSkyline.759d47c9.jpg",
+    "static/media/frontcenter.b92d0e93.png": "/static/media/frontcenter.b92d0e93.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ec2b6984.js",
-    "static/js/2.a0882c8e.chunk.js",
-    "static/css/main.5e722198.chunk.css",
-    "static/js/main.cd4df869.chunk.js"
+    "static/js/runtime-main.6aeb90b0.js",
+    "static/js/2.85b4e286.chunk.js",
+    "static/css/main.e9911ee3.chunk.css",
+    "static/js/main.cfa300f5.chunk.js"
   ]
 }
