@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e722198.chunk.css",
-    "main.js": "/static/js/main.cd4df869.chunk.js",
-    "main.js.map": "/static/js/main.cd4df869.chunk.js.map",
+    "main.css": "/static/css/main.5ce4c272.chunk.css",
+    "main.js": "/static/js/main.42d81f8b.chunk.js",
+    "main.js.map": "/static/js/main.42d81f8b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ec2b6984.js",
     "runtime-main.js.map": "/static/js/runtime-main.ec2b6984.js.map",
     "static/js/2.a0882c8e.chunk.js": "/static/js/2.a0882c8e.chunk.js",
@@ -10,22 +10,23 @@
     "static/js/3.09e3c108.chunk.js": "/static/js/3.09e3c108.chunk.js",
     "static/js/3.09e3c108.chunk.js.map": "/static/js/3.09e3c108.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5e722198.chunk.css.map": "/static/css/main.5e722198.chunk.css.map",
+    "static/css/main.5ce4c272.chunk.css.map": "/static/css/main.5ce4c272.chunk.css.map",
     "static/js/2.a0882c8e.chunk.js.LICENSE.txt": "/static/js/2.a0882c8e.chunk.js.LICENSE.txt",
     "static/media/LogoNoBGWhite.a67ac529.png": "/static/media/LogoNoBGWhite.a67ac529.png",
-    "static/media/aslogrepeatingbg.c8174200.png": "/static/media/aslogrepeatingbg.c8174200.png",
+    "static/media/ada-headshot.d93f117a.png": "/static/media/ada-headshot.d93f117a.png",
+    "static/media/andrea-headshot.70ffa04d.png": "/static/media/andrea-headshot.70ffa04d.png",
+    "static/media/Body.css": "/static/media/semi-main-logo.97d71783.png",
     "static/media/clipboard.1a55f78e.png": "/static/media/clipboard.1a55f78e.png",
     "static/media/distribution-center-2.93ce8c30.png": "/static/media/distribution-center-2.93ce8c30.png",
     "static/media/distribution-center.4e4aed75.png": "/static/media/distribution-center.4e4aed75.png",
-    "static/media/instagram-icon.e403234c.png": "/static/media/instagram-icon.e403234c.png",
+    "static/media/hector-headshot.89212a7b.png": "/static/media/hector-headshot.89212a7b.png",
     "static/media/location.1a9b7314.png": "/static/media/location.1a9b7314.png",
-    "static/media/Body.css": "/static/media/semi-stock-banner-2.c9bfe993.jpg",
     "static/media/revisedlogo.5cece128.png": "/static/media/revisedlogo.5cece128.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ec2b6984.js",
     "static/js/2.a0882c8e.chunk.js",
-    "static/css/main.5e722198.chunk.css",
-    "static/js/main.cd4df869.chunk.js"
+    "static/css/main.5ce4c272.chunk.css",
+    "static/js/main.42d81f8b.chunk.js"
   ]
 }
